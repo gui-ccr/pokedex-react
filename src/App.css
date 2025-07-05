@@ -1,42 +1,71 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Estilos gerais para o body */
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* O container principal da nossa aplicação */
+.app-container {
+    background-color: white;
+    width: 100%;
+    /* CORREÇÃO: Aumentei a largura máxima para permitir mais colunas */
+    max-width: 900px; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+h1 {
+    text-align: center;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+/* Estilos para a grade de Pokémon */
+.pokemon-grid {
+    display: grid; 
+    gap: 16px; /* Espaçamento entre os cards */
+    /* Regra para criar colunas responsivas */
+    grid-template-columns: 1fr 1fr;
+
+}
+
+/* SE a tela tiver no mínimo 800px de largura (tablets em modo paisagem e desktops)... */
+@media (min-width: 800px) {
+  .pokemon-grid {
+    /* ... mude para 3 colunas. */
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Estilos para o card individual */
+.pokemon-card {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.card {
-  padding: 2em;
+.pokemon-card:hover {
+    transform: translateY(-5px); /* Efeito de "levantar" o card */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-.read-the-docs {
-  color: #888;
+.pokemon-card img {
+    width: 120px;
+    height: 120px;
+}
+
+.pokemon-card p {
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: capitalize; /* Deixa a primeira letra maiúscula */
+    color: #333;
 }
