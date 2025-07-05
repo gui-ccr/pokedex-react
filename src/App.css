@@ -69,3 +69,25 @@ h1 {
     text-transform: capitalize; /* Deixa a primeira letra maiúscula */
     color: #333;
 }
+/* Estilos para o container da busca */
+.search-container {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#search-input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  -webkit-appearance: none; /* Remove estilos padrão do iOS */
+  box-sizing: border-box;
+}
+
+#search-input:focus {
+  outline: none;
+  border-color: #5c67f2;
+  box-shadow: 0 0 0 3px rgba(92, 103, 242, 0.2);
+}

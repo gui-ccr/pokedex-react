@@ -6,6 +6,7 @@ import PokemonGrid from './PokemonGrid.jsx'; // 1. Importe o novo componente da 
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
+  const [busca, setBusca] = useState('')
 
   useEffect(() => {
     async function buscarPokemons() {
@@ -20,14 +21,26 @@ function App() {
     buscarPokemons();
   }, []);
 
-  // Agora podemos remover o console.log, pois veremos o resultado na tela!
+  const pokemonFiltrados = pokemons.filter(pokemon =>
+    pokemon.name.toLowerCase().includes(busca.toLowerCase())
+  )
 
   return (
     <div className="app-container">
       <h1>Pokédex</h1>
+
+      <div className="search-container">
+        <input 
+        type="text"
+        id='search-input'
+        placeholder='Buscar pokemon pelo nome....'
+        value={busca}
+        onChange={e => setBusca(e.target.value)}
+        />
+      </div>
       
       {/* 2. Em vez do comentário, renderize o PokemonGrid, passando a lista como prop. */}
-      <PokemonGrid pokemons={pokemons} />
+      <PokemonGrid pokemons={pokemonFiltrados} />
     </div>
   )
 }
