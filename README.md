@@ -4,7 +4,7 @@ Uma aplicação web moderna e responsiva que exibe uma lista dos 151 Pokémon or
 
 Este projeto solidifica os aprendizados do desenvolvimento com JavaScript puro e demonstra a aplicação de uma arquitetura escalável baseada em componentes.
 
-### 🔗 [Demonstração Ao Vivo]()
+### 🔗 [Demonstração Ao Vivo](https://gui-ccr.github.io/pokedex-react/)
 
 
 ---
@@ -47,7 +47,7 @@ Este projeto foi uma imersão nos principais conceitos do ecossistema React:
 
 ```bash
 # 1. Clone o repositório
-$ git clone URL_DO_SEU_REPOSITORIO_AQUI
+$ git clone https://github.com/gui-ccr/pokedex-react
 
 # 2. Navegue até o diretório
 $ cd pokedex-react
