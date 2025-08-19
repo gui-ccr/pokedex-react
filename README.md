@@ -43,7 +43,7 @@
 |  Pokemon | Exibe os 151 Pokémon iniciais em uma grade responsiva, consumindo dados da PokéAPI. | ✅ |
 | 🔍 **Busca em Tempo Real** | Filtra a lista de Pokémon por nome instantaneamente conforme o usuário digita. | ✅ |
 | 📱 **Layout Responsivo** | A interface se adapta perfeitamente a desktops, tablets e dispositivos móveis usando CSS Grid. | ✅ |
-| 🔗 **Links Dinâmicos** | Cada card de Pokémon é um link que poderia levar a uma página de detalhes (funcionalidade futura). | ✅ |
+| 🔗 **Links Dinâmicos** | Cada card de Pokémon é um link que poderia levar a uma página de detalhes (funcionalidade futura). | 🗯️ |
 
 ---
 
